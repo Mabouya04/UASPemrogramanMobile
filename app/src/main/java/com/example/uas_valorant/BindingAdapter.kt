@@ -9,9 +9,11 @@ import coil.api.load
 import com.example.uas_valorant.ui.agent.AgentsAdapter
 import com.example.uas_valorant.ui.agent.ValorantsApiStatus
 import com.example.uas_valorant.ui.network.DataItem
-import com.example.uas_valorant.ui.network.DataItems
+import com.example.uas_valorant.ui.network.DataItem1
 import com.example.uas_valorant.ui.weapons.ValorantApiStatus
 import com.example.uas_valorant.ui.weapons.WeaponsAdapter
+import com.example.uas_valorant.ui.maps.MapsAdapter
+import com.example.uas_valorant.ui.network.DataItems
 
 
 @BindingAdapter("listData")
@@ -19,24 +21,16 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<DataItem>?){
     val adapter = recyclerView.adapter as WeaponsAdapter
     adapter.submitList(data)
 }
-
 @BindingAdapter("listDatas")
 fun bindRecyclerViews(recyclerView: RecyclerView, data: List<DataItems>?){
     val adapter = recyclerView.adapter as AgentsAdapter
     adapter.submitList(data)
 }
-
-//@BindingAdapter("listDataAgent")
-//fun bindRecyclerViews(recyclerView: RecyclerView, data: List<PotterBukuItem>?){
-//    val adapter = recyclerView.adapter as BukuListAdapter
-//    adapter.submitList(data)
-//}
-
-//@BindingAdapter("listDatas")
-//fun bindRecyclerViews(recyclerView: RecyclerView, data: List<PotterBukuItem>?){
-//    val adapter = recyclerView.adapter as BukuListAdapter
-//    adapter.submitList(data)
-//}
+@BindingAdapter("listDataMap")
+fun bindRecyclerViewMap(recyclerView: RecyclerView, data: List<DataItem1>?){
+    val adapter = recyclerView.adapter as MapsAdapter
+    adapter.submitList(data)
+}
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {

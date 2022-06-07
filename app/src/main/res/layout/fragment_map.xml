@@ -6,11 +6,11 @@
 
     <data>
         <variable
-            name="agent"
-            type="com.example.uas_valorant.ui.network.Agent" />
+            name="map"
+            type="com.example.uas_valorant.ui.network.Map" />
         <variable
             name="viewModel"
-            type="com.example.uas_valorant.ui.agent.AgentsViewModel" />
+            type="com.example.uas_valorant.ui.maps.MapsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +31,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:imageUrl="@{viewModel.agent.displayIcon}"
+                app:imageUrl="@{viewModel.map.displayName}"
                 tools:ignore="ExtraText">
 
             </ImageView>
@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
-                        android:text="@{viewModel.agent.displayName}"
+                        android:text="@{viewModel.map.displayName}"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textStyle="bold"
@@ -98,7 +98,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
-                        android:text="Role"
+                        android:text="Coordinate"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textStyle="bold" />
@@ -108,16 +108,16 @@
                     android:layout_width="163dp"
                     android:layout_height="match_parent">
                     <TextView
-                        android:id="@+id/gender"
+                        android:id="@+id/coordinate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
-                        android:text="@{viewModel.agent.role.displayName}"
+                        android:text="@{viewModel.map.coordinates}"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textStyle="bold"
-                        tools:text="Gender">
+                        tools:text="Coordinate">
 
                     </TextView>
                 </androidx.cardview.widget.CardView>
@@ -137,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
-                        android:text="Description"
+                        android:text="MapUrl"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textStyle="bold" />
@@ -147,16 +147,16 @@
                     android:layout_width="163dp"
                     android:layout_height="match_parent">
                     <TextView
-                        android:id="@+id/category"
+                        android:id="@+id/link"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
-                        android:text="@{viewModel.agent.role.description}"
+                        android:text="@{viewModel.map.mapUrl}"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textStyle="bold"
-                        tools:text="Tanggal">
+                        tools:text="Link">
 
                     </TextView>
                 </androidx.cardview.widget.CardView>

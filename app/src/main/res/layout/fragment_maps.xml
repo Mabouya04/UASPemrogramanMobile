@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.uas_valorant.ui.agent.AgentsViewModel" />
+            type="com.example.uas_valorant.ui.maps.MapsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,18 +19,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            app:listDatas="@{viewModel.agents}"
+            app:listDataMap="@{viewModel.maps}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/list_view_item" />
 
 
+        <!-- harus menampilkan status  -->
         <ImageView
             android:id="@+id/status_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:apiStatuses="@{viewModel.status}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -40,3 +40,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
+    <!--            app:apiStatus="@{viewModel.status}"-->

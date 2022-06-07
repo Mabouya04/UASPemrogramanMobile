@@ -44,4 +44,24 @@
             app:destination="@id/weaponsFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.uas_valorant.ui.maps.MapsFragment"
+        android:label="@string/menu_maps"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_mapsFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.uas_valorant.ui.maps.MapFragment"
+        android:label="MapFragment"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_mapFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+
+
 </navigation>
