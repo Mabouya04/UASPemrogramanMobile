@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.uas_valorant.ui.agent.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_agent_to_weaponsFragment"
+            app:destination="@id/weaponsFragment" />
+<!--        <action-->
+<!--            android:id="@+id/action_nav_home_to_weaponsFragment"-->
+<!--            app:destination="@id/weaponsFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_nav_home_to_weaponsFragment"-->
+<!--            app:destination="@id/weaponsFragment" />-->
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/weaponsFragment"
+        android:name="com.example.uas_valorant.ui.weapons.WeaponsFragment"
+        android:label="@string/menu_weapons"
+        tools:layout="@layout/fragment_weapons">
+        <action
+            android:id="@+id/action_weaponsFragment_to_weaponFragment"
+            app:destination="@id/weaponFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weaponFragment"
+        android:name="com.example.uas_valorant.ui.weapons.WeaponFragment"
+        android:label="WeaponFragment"
+        tools:layout="@layout/fragment_weapon">
+        <action
+            android:id="@+id/action_weaponFragment_to_weaponsFragment"
+            app:destination="@id/weaponsFragment" />
+    </fragment>
+
+</navigation>
