@@ -20,8 +20,8 @@
 
         <FrameLayout
             android:id="@+id/frameLayout"
-            android:layout_width="130dp"
-            android:layout_height="154dp"
+            android:layout_width="260dp"
+            android:layout_height="193dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -29,8 +29,8 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="260dp"
+                android:layout_height="193dp"
                 app:imageUrl="@{viewModel.agent.displayIcon}"
                 tools:ignore="ExtraText">
 
@@ -39,7 +39,7 @@
 
         <TableLayout
             android:layout_width="333dp"
-            android:layout_height="86dp"
+            android:layout_height="200dp"
             android:layout_marginTop="56dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +68,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="163dp"
                     android:layout_height="match_parent">
+
                     <TextView
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
@@ -78,7 +79,7 @@
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textStyle="bold"
-                        tools:text="Nama">
+                        tools:text="Name">
 
                     </TextView>
                 </androidx.cardview.widget.CardView>
@@ -86,7 +87,7 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="168dp"
@@ -107,8 +108,9 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="163dp"
                     android:layout_height="match_parent">
+
                     <TextView
-                        android:id="@+id/gender"
+                        android:id="@+id/role"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -117,7 +119,7 @@
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textStyle="bold"
-                        tools:text="Gender">
+                        tools:text="Role">
 
                     </TextView>
                 </androidx.cardview.widget.CardView>
@@ -125,11 +127,11 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="168dp"
-                    android:layout_height="28dp">
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView5"
@@ -144,19 +146,20 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="163dp"
-                    android:layout_height="match_parent">
+                    android:layout_width="149dp"
+                    android:layout_height="141dp">
+
                     <TextView
-                        android:id="@+id/category"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/description"
+                        android:layout_width="163dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="5dp"
                         android:text="@{viewModel.agent.role.description}"
-                        android:textAlignment="center"
+                        android:textAlignment="gravity"
                         android:textAllCaps="false"
                         android:textStyle="bold"
-                        tools:text="Tanggal">
+                        tools:text="Description">
 
                     </TextView>
                 </androidx.cardview.widget.CardView>
