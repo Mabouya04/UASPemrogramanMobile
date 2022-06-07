@@ -26,7 +26,6 @@
             tools:listitem="@layout/list_view_item" />
 
 
-        <!-- harus menampilkan status  -->
         <ImageView
             android:id="@+id/status_image"
             android:layout_width="wrap_content"
@@ -40,4 +39,3 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
-    <!--            app:apiStatus="@{viewModel.status}"-->
