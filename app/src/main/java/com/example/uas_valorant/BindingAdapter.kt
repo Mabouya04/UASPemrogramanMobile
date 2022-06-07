@@ -6,7 +6,10 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import com.example.uas_valorant.ui.agent.AgentsAdapter
+import com.example.uas_valorant.ui.agent.ValorantsApiStatus
 import com.example.uas_valorant.ui.network.DataItem
+import com.example.uas_valorant.ui.network.DataItems
 import com.example.uas_valorant.ui.weapons.ValorantApiStatus
 import com.example.uas_valorant.ui.weapons.WeaponsAdapter
 
@@ -16,6 +19,18 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<DataItem>?){
     val adapter = recyclerView.adapter as WeaponsAdapter
     adapter.submitList(data)
 }
+
+@BindingAdapter("listDatas")
+fun bindRecyclerViews(recyclerView: RecyclerView, data: List<DataItems>?){
+    val adapter = recyclerView.adapter as AgentsAdapter
+    adapter.submitList(data)
+}
+
+//@BindingAdapter("listDataAgent")
+//fun bindRecyclerViews(recyclerView: RecyclerView, data: List<PotterBukuItem>?){
+//    val adapter = recyclerView.adapter as BukuListAdapter
+//    adapter.submitList(data)
+//}
 
 //@BindingAdapter("listDatas")
 //fun bindRecyclerViews(recyclerView: RecyclerView, data: List<PotterBukuItem>?){
@@ -45,6 +60,23 @@ fun bindStatus(statusImageView: ImageView, status: ValorantApiStatus?) {
             statusImageView.visibility = View.GONE
         }
         ValorantApiStatus.ERROR -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.ic_connection_error)
+        }
+    }
+}
+
+@BindingAdapter("apiStatuses")
+fun bindStatus(statusImageView: ImageView, status: ValorantsApiStatus?) {
+    when(status) {
+        ValorantsApiStatus.LOADING -> {
+            statusImageView.visibility = View.VISIBLE
+            statusImageView.setImageResource(R.drawable.loading_animation)
+        }
+        ValorantsApiStatus.DONE -> {
+            statusImageView.visibility = View.GONE
+        }
+        ValorantsApiStatus.ERROR -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }

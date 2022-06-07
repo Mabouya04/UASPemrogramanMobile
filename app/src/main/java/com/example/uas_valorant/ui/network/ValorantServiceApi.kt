@@ -1,5 +1,6 @@
 package com.example.uas_valorant
 
+import com.example.uas_valorant.ui.network.Agent
 import com.example.uas_valorant.ui.network.DataItem
 import com.example.uas_valorant.ui.network.Weapon
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -29,8 +30,19 @@ interface ValorantServiceApi{
     fun getListWeapons(): Deferred<Weapon>
 }
 
+interface ValorantServicesApi{
+    @GET("v1/agents")
+    fun getListAgents(): Deferred<Agent>
+}
+
 object ValorantApi{
     val retrofitValorantApi : ValorantServiceApi by lazy {
         retrofit.create(ValorantServiceApi::class.java)
+    }
+}
+
+object ValorantsApi{
+    val retrofitValorantsApi: ValorantServicesApi by lazy {
+        retrofit.create(ValorantServicesApi::class.java)
     }
 }
