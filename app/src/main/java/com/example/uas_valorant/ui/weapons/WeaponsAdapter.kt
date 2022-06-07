@@ -4,7 +4,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
-
 import com.example.uas_valorant.databinding.ListViewItemBinding
 import com.example.uas_valorant.ui.network.DataItem
 import com.example.uas_valorant.ui.network.Weapon

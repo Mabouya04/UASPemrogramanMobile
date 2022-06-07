@@ -7,8 +7,11 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.example.uas_valorant.ui.network.DataItem
+import com.example.uas_valorant.ui.network.dataItem
 import com.example.uas_valorant.ui.weapons.ValorantApiStatus
 import com.example.uas_valorant.ui.weapons.WeaponsAdapter
+import com.example.uas_valorant.ui.maps.MapsAdapter
+
 
 
 @BindingAdapter("listData")
@@ -16,12 +19,11 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<DataItem>?){
     val adapter = recyclerView.adapter as WeaponsAdapter
     adapter.submitList(data)
 }
-
-//@BindingAdapter("listDatas")
-//fun bindRecyclerViews(recyclerView: RecyclerView, data: List<PotterBukuItem>?){
-//    val adapter = recyclerView.adapter as BukuListAdapter
-//    adapter.submitList(data)
-//}
+@BindingAdapter("listDataMap")
+fun bindRecyclerViewMap(recyclerView: RecyclerView, data: List<dataItem>?){
+    val adapter = recyclerView.adapter as MapsAdapter
+    adapter.submitList(data)
+}
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {

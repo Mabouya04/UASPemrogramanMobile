@@ -1,6 +1,6 @@
 package com.example.uas_valorant
 
-import com.example.uas_valorant.ui.network.DataItem
+import com.example.uas_valorant.ui.network.Map
 import com.example.uas_valorant.ui.network.Weapon
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
@@ -28,9 +28,18 @@ interface ValorantServiceApi{
     @GET("v1/weapons")
     fun getListWeapons(): Deferred<Weapon>
 }
+interface ValorantServiceApi1{
+    @GET("v1/maps")
+    fun getListMaps(): Deferred<Map>
+}
 
 object ValorantApi{
     val retrofitValorantApi : ValorantServiceApi by lazy {
         retrofit.create(ValorantServiceApi::class.java)
+    }
+}
+object ValorantApi1{
+    val retrofitValorantApi1 : ValorantServiceApi1 by lazy {
+        retrofit.create(ValorantServiceApi1::class.java)
     }
 }
