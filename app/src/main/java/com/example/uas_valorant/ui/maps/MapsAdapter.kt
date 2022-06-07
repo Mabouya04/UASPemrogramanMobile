@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
-import com.example.uas_valorant.databinding.ListViewItemBinding
+import com.example.uas_valorant.databinding.ListViewItem1Binding
 import com.example.uas_valorant.ui.network.dataItem
 import com.example.uas_valorant.ui.network.Map
 
@@ -12,7 +12,7 @@ class MapsAdapter(private val clickListener: MapsListener) :
     ListAdapter<dataItem, MapsAdapter.MapsViewHolder>(DiffCallback)
 {
     class MapsViewHolder(
-        var binding: ListViewItemBinding
+        var binding: ListViewItem1Binding
     ) : RecyclerView.ViewHolder(binding.root){
         fun bind(clickListener: MapsListener, maps: dataItem){
             binding.maps = maps
@@ -34,7 +34,7 @@ class MapsAdapter(private val clickListener: MapsListener) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : MapsViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return MapsViewHolder(
-            ListViewItemBinding.inflate(layoutInflater, parent, false)
+            ListViewItem1Binding.inflate(layoutInflater, parent, false)
         )
     }
 
