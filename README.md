@@ -9,7 +9,7 @@ Aplikasi ini berisi informasi-informasi yang ada didalam game Valorant, yakni:
     </ul>
 </div>
 
-## Website ini dibuat oleh : 
+## Aplikasi ini dibuat oleh : 
 <table class="table tabel-stripped table-dark border">
     <tr>
         <th>Nama</th>
@@ -32,16 +32,6 @@ Aplikasi ini berisi informasi-informasi yang ada didalam game Valorant, yakni:
         <td>2010817210015@mhs.ulm.ac.id</td>
     </tr>
 </table>
-    
-<div class="m-3">
-    <ul class="list-group" style="width: 40%">
-        <li class="list-group-item bg-dark text-white">Web ini dibangun dengan:</li>
-        <li class="list-group-item">Laravel</li>
-        <li class="list-group-item">Bootstrap</li>
-        <li class="list-group-item">PHP</li>
-        <li class="list-group-item">MySQL</li>
-    </ul>
-</div>
 
 # Data API
 https://valorant-api.com/
