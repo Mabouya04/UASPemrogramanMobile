@@ -42,3 +42,11 @@ https://valorant-api.com/v1/agents
 https://valorant-api.com/v1/weapons
 ## Endpoint Map
 https://valorant-api.com/v1/maps
+
+##Documentation
+https://dash.valorant-api.com/
+
+Data Model
+#Agent
+#Map
+#Weapon
