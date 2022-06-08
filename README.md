@@ -47,6 +47,8 @@ https://valorant-api.com/v1/maps
 https://dash.valorant-api.com/
 
 # Data Model
-Agent
-Map
-Weapon
+<ul>
+<li>Agent</li>
+<li>Map</li>
+<li>Weapon</li>
+</ul>
